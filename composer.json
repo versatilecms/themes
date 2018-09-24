@@ -1,0 +1,22 @@
+{
+  "name": "versatilecms/themes",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Fábio Assunção",
+          "email": "fabio23gt@gmail.com"
+      }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Versatile\\Themes\\": "src/"
+    }
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Versatile\\Themes\\Providers\\ThemesServiceProvider"
+          ]
+      }
+  }
+}

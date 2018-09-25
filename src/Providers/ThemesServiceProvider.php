@@ -47,6 +47,7 @@ class ThemesServiceProvider extends ServiceProvider
     {
         try {
 
+            // @todo Implementar isso de forma mais apropriada
             $this->themesFolder = config('themes.themes_folder', base_path('Themes'));
 
             $this->strapRoutes();
@@ -93,6 +94,26 @@ class ThemesServiceProvider extends ServiceProvider
         $this->strapTheme();
 
         $this->mergeConfigFrom($this->packagePath . 'config/themes.php', 'themes');
+
+        if ($this->app->runningInConsole()) {
+            $this->strapPublishers();
+        }
+    }
+
+    /**
+     * Register the publishable files.
+     */
+    private function strapPublishers()
+    {
+        $publishable = [
+            'config' => [
+                $this->packagePath . 'config/themes.php' => config_path('themes.php'),
+            ]
+        ];
+
+        foreach ($publishable as $group => $paths) {
+            $this->publishes($paths, $group);
+        }
     }
 
     /**

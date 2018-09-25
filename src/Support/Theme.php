@@ -53,8 +53,8 @@ class Theme implements ModuleInterface
      */
     public function __construct($folder)
     {
-        $this->assetsPath = config('themes.assets_path', public_path('themes'));
-        $this->themesFolder = config('themes.themes_folder', base_path('Themes'));
+        $this->assetsPath = config('versatile-themes.assets_path', public_path('themes'));
+        $this->themesFolder = config('versatile-themes.themes_folder', base_path('Themes'));
 
         $this->handle($folder);
 
@@ -181,7 +181,7 @@ class Theme implements ModuleInterface
      */
     public function publish()
     {
-        if (config('themes.publish_assets', true) === false) {
+        if (config('versatile-themes.publish_assets', true) === false) {
             return $this;
         }
 

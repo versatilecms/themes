@@ -48,7 +48,7 @@ class ThemesServiceProvider extends ServiceProvider
         try {
 
             // @todo Implementar isso de forma mais apropriada
-            $this->themesFolder = config('themes.themes_folder', base_path('Themes'));
+            $this->themesFolder = config('versatile-themes.themes_folder', base_path('Themes'));
 
             $this->strapRoutes();
             $this->strapViews();
@@ -93,7 +93,7 @@ class ThemesServiceProvider extends ServiceProvider
 
         $this->strapTheme();
 
-        $this->mergeConfigFrom($this->packagePath . 'config/themes.php', 'themes');
+        $this->mergeConfigFrom($this->packagePath . 'config/versatile-themes.php', 'versatile-themes');
 
         if ($this->app->runningInConsole()) {
             $this->strapPublishers();
@@ -107,7 +107,7 @@ class ThemesServiceProvider extends ServiceProvider
     {
         $publishable = [
             'config' => [
-                $this->packagePath . 'config/themes.php' => config_path('themes.php'),
+                $this->packagePath . 'config/versatile-themes.php' => config_path('versatile-themes.php'),
             ]
         ];
 

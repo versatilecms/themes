@@ -8,7 +8,7 @@ if (!function_exists('themes_path')) {
      */
     function themes_path($theme = null)
     {
-        $path = config('themes.themes_folder', base_path('Themes'));
+        $path = config('versatile-themes.themes_folder', base_path('Themes'));
         if (is_null($theme)) {
             return $path;
         }
@@ -25,7 +25,7 @@ if (!function_exists('theme_assets')) {
      */
     function theme_assets($theme = null)
     {
-        $path = config('themes.assets_path', public_path('themes'));
+        $path = config('versatile-themes.assets_path', public_path('themes'));
         if (is_null($theme)) {
             return $path;
         }

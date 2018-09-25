@@ -166,7 +166,7 @@
         @if(count($themes) < 1)
 	        <div class="alert alert-warning">
 	            <strong>Wuh oh!</strong>
-	            <p>It doesn't look like you have any themes available in your theme folder located at <code><?= config('themes.themes_folder'); ?></code></p>
+	            <p>It doesn't look like you have any themes available in your theme folder located at <code><?= config('versatile-themes.themes_folder'); ?></code></p>
 	        </div>
 	    @endif
 

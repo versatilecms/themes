@@ -24,7 +24,7 @@ class Themes extends ModuleRepository
     public function __construct(Container $app, $path = null)
     {
         parent::__construct($app, $path);
-        $this->path = config('themes.themes_folder', base_path('Themes'));
+        $this->path = config('versatile-themes.themes_folder', base_path('Themes'));
     }
 
     protected function createModule($folder)

@@ -18,5 +18,7 @@
               "Versatile\\Themes\\Providers\\ThemesServiceProvider"
           ]
       }
-  }
+  },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

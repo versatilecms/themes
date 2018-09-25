@@ -47,7 +47,7 @@ class ThemesServiceProvider extends ServiceProvider
     {
         try {
 
-            $this->themesFolder = config('themes.themes_folder', resource_path('views/themes'));
+            $this->themesFolder = config('themes.themes_folder', base_path('Themes'));
 
             $this->strapRoutes();
             $this->strapViews();

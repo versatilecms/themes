@@ -24,7 +24,7 @@ class Themes extends ModuleRepository
     public function __construct(Container $app, $path = null)
     {
         parent::__construct($app, $path);
-        $this->path = config('themes.themes_folder', resource_path('views/themes'));
+        $this->path = config('themes.themes_folder', base_path('Themes'));
     }
 
     protected function createModule($folder)

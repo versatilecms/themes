@@ -8,7 +8,7 @@ if (!function_exists('themes_path')) {
      */
     function themes_path($theme = null)
     {
-        $path = config('themes.themes_folder', resource_path('views/themes'));
+        $path = config('themes.themes_folder', base_path('Themes'));
         if (is_null($theme)) {
             return $path;
         }

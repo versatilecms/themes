@@ -54,7 +54,7 @@ class Theme implements ModuleInterface
     public function __construct($folder)
     {
         $this->assetsPath = config('themes.assets_path', public_path('themes'));
-        $this->themesFolder = config('themes.themes_folder', resource_path('views/themes'));
+        $this->themesFolder = config('themes.themes_folder', base_path('Themes'));
 
         $this->handle($folder);
 
